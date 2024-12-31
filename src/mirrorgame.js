@@ -19,7 +19,7 @@ const controller = new Controller();
 const description = document.getElementById("description");
 
 const imageURLS = {
-	"piggy": ["../images/piggy.png", "../images/piggyhover.png", "../images/piggyselected.png", "../images/piggyhoverdelete.png", "../images/piggy2.png", "../images/piggy2hover.png", "../images/piggy2selected.png", "../images/piggy2hoverdelete.png"]
+	"piggy": ["images/piggy.png", "images/piggyhover.png", "images/piggyselected.png", "images/piggyhoverdelete.png", "images/piggy2.png", "images/piggy2hover.png", "images/piggy2selected.png", "images/piggy2hoverdelete.png"]
 }
 const sprites = {
 	"piggy": []
