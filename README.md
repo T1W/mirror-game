@@ -1,6 +1,8 @@
 # Mirror Game
 Unfinished mirror game made around March to May 2023
 
+https://t1w.github.io/mirror-game/
+
 ## Instructions
 **Edit mode**: Click objects to select them. Move the selected object by dragging the blue circle and rotate it using the green circle. Flashlights and colored panels have a button next to them you can click to toggle the laser or change the panel's color. You can use the keys indicated in the side panel to change the objects' sizes, rotate them, and change their properties.
 
