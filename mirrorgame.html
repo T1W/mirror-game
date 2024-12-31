@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mirror Game</title>
+<meta charset="UTF-8">
+<link rel="icon" href="images/mirrorgame.png">
+<link rel="stylesheet" href="mirrorgame.css">
+</head>
+<body>
+
+<link rel="stylesheet" href="mirrorgame.css">
+
+<noscript>Runs on JavaScript</noscript>
+
+
+<div id="container">
+<div class="menubar">
+<button id="addbutton" onclick = "switchMode('add')">Add</button>
+<button id="editbutton" onclick = "switchMode('edit')" class = "active">Edit</button>
+<button id="deletebutton" onclick = "switchMode('delete')">Delete</button>
+<button id="deletebutton" onclick = "switchPanel('exportPanel')">Save</button>
+</div>
+
+<canvas tabindex="1" id="canvy" width="800" height="550" style="border: 1px solid #00cfff"></canvas>
+</div>
+
+<div id="panel">
+<div id="addPanel" class="innerPanel active">
+<h1>Add Object</h1>
+<div class="content">
+<div class="button-selection">
+<button style="background-image:url('../images/mirror.svg')" onclick="setAddObjectType('Mirror', this)"><span>Mirror</span></button>
+<button style="background-image:url('../images/coloredpanel.svg')" onclick="setAddObjectType('Colored Panel', this)"><span>Colored Panel</span></button>
+<button style="background-image:url('../images/flashlight.svg')" onclick="setAddObjectType('Flashlight', this)"><span>Flashlight</span></button>
+<button style="background-image:url('../images/transparentblock.svg')" onclick="setAddObjectType('Transparent Block', this)"><span>Transparent Block</span></button>
+<button style="background-image:url('../images/blackbox.svg')" onclick="setAddObjectType('Black Box', this)"><span>Black Box</span></button>
+<button style="background-image:url('../images/piggy.svg')" onclick="setAddObjectType('Piggy', this)"><span>Aink Aink!</span></button>
+</div>
+<hr>
+<div id="description"><b id="objectName"></b><span id="objectDescription">Aink aink! New Pig likes mirrors and lasers!</span></div>
+<hr>
+<button class="largeButton" onclick="resetLevel()">Clear all objects</button>
+
+<h2>Keyboard Controls</h2>
+<ul>
+<li><b class="key">W</b>: Increase height</li>
+<li><b class="key">S</b>: Decrease height</li>
+<li><b class="key">D</b>: Increase width</li>
+<li><b class="key">A</b>: Decrease width</li>
+<li><b class="key">Q</b>: Rotate counterclockwise</li>
+<li><b class="key">E</b>: Rotate clockwise</li>
+<li><b class="key">Shift+Q</b>: Rotate 45 degrees counterclockwise</li>
+<li><b class="key">Shift+E</b>: Rotate 45 degrees clockwise</li>
+<li><b class="key">R</b>: Align with multiple of 45 degrees</li>
+<li><b class="key">L</b>: Toggle flashlight or change panel color</li>
+<li><b class="key">K</b>: Change panel mode (add, subtract, equal)</li>
+<li><b class="key">Shift+L</b>: Change panel color in opposite direction</li>
+<li><b class="key">Shift+K</b>: Change panel mode in opposite direction</li>
+<li><b class="key">1</b>: Add mode</li>
+<li><b class="key">2</b>: Edit mode</li>
+<li><b class="key">3</b>: Delete mode</li>
+</ul>
+</div>
+</div>
+
+<div id="exportPanel" class="innerPanel">
+<h1>Export / Import</h1>
+<div class="content">
+<button class="largeButton" onclick="switchPanel('addPanel')">Back</button>
+<h2>Export</h2>
+<textarea id="exportData"></textarea>
+<button class="largeButton" onclick="exportLevel()">Export</button>
+<h2>Import</h2>
+<textarea id="importData"></textarea>
+<button class="largeButton" onclick="importLevel()">Import</button>
+<p id="importStatus"></p>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="helper.js"></script>
+<script type="text/javascript" src="objects.js"></script>
+<script type="text/javascript" src="laser.js"></script>
+<script type="text/javascript" src="buttons.js"></script>
+<script type="text/javascript" src="editor.js"></script>
+<script type="text/javascript" src="leveleditor.js"></script>
+<script type="text/javascript" src="controls.js"></script>
+<script type="text/javascript" src="textdescriptions.js"></script>
+<script type="text/javascript" src="exportsave.js"></script>
+<script type="text/javascript" src="mirrorgame.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

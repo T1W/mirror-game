@@ -1,0 +1,170 @@
+* {
+	font-family: sans-serif;
+}
+
+#container {
+	width: 800px;
+	display: inline-block;
+}
+
+.menubar {
+	width: 100%;
+	display: flex;
+	column-gap: 5px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	border:1px solid #c778ac;
+	background-color: #ffd4f0;
+	margin-bottom: 5px;
+}
+
+.menubar button {
+	box-sizing: border-box;
+	flex: 1 1 0;
+	height: 30px;
+	font-size: 16px;
+	border-radius: 0px;
+	background-color: white;
+	border: 1px solid #c778ac;
+}
+
+.menubar button:hover {
+	color: #ca57a2;
+	outline: 1px solid #c778ac;
+}
+
+.menubar button.active {
+	color: white;
+	border-color: white;
+	background-color: #eb6296;
+}
+
+#panel {
+	box-sizing: border-box;
+	background-color: white;
+	border: 2px solid green;
+	width: 400px;
+	display: inline-block;
+	margin-left: 10px;
+	overflow-x: hidden;
+}
+
+#panel h1 {
+	box-sizing: border-box;
+	background-color: #22af59;
+	color: white;
+	margin: 0;
+	height: 50px;
+	line-height: 40px;
+	padding: 5px 10px;
+}
+
+.innerPanel {
+	display:none;
+}
+
+.innerPanel.active {
+	display:block;
+}
+
+.content {
+	padding: 10px;
+	height: 550px;
+	box-sizing: border-box;
+	overflow-y: auto;
+}
+
+#panel hr {
+  width:95%;
+  color:#66e063;
+}
+
+.button-selection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+.button-selection button {
+	width: 30%;
+	aspect-ratio: 1 / 1;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 10px;
+	position: relative;
+	background-size: contain;
+	border: 4px solid #33ac39;
+	border-radius: 5px;
+}
+
+.button-selection button:hover {
+	border-color: #99e17e;
+}
+
+.button-selection button:active {
+	top:2px;
+	border-color: #046818;
+}
+
+.button-selection button.active {
+	border-color: #71d0ff;
+}
+
+.button-selection button.active:hover {
+	border-color: #a9e8fb;
+}
+
+.button-selection button span{
+	position: relative;
+	color: white;
+	top: 30%;
+}
+
+.button-selection button.active span{
+	font-weight: bold;
+}
+
+#description {
+	text-align:center;
+}
+
+#panel h2 {
+	margin: 12px 0px;
+}
+
+#exportPanel textarea {
+	width:calc(100% - 10px);
+	height:100px;
+	font-family:monospace;
+	font-size:12px;
+	margin-bottom: 10px;
+}
+
+.largeButton {
+	width: 100%;
+	height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #0090d7;
+	color: white;
+	border: 3px solid #82d6ff;
+}
+
+.largeButton:hover {
+	background-color: #1ba9ef;
+	border: 3px solid #aeecff;
+}
+
+#importStatus {
+	text-align:center;
+	font-weight:bold;
+}
+
+.success {
+	color:green;
+}
+
+.error {
+	color:red;
+}
